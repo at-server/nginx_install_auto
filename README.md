@@ -10,29 +10,39 @@
 
 ### HELP
 Usage: ./auto_nginx_install-bin-1.0.1.sh [OPT] [VALUE] v1.0.1
-            # Nginx 运行用户，默认：nobody
-            -u, STRING, nginx daemon user.
-            # Nginx 运行时使用的 CPU 个数，默认自动获取个数最大化设置
-            -c, NUMBER, cpu cores.
-            # 实行正常安装（静态服务器而非反向代理服务器）
-            -n, normal install, default.
-            # HTTP 参数设置，静态服务器与反向代理服务器需设置，默认 HTTP
-            -h, STRING, http hostname:port(set http).
-            # HTTPS 参数设置，态服务器与反向代理服务器需设置，默认 HTTP
-            -s, STRING, https hostname:port(set https).
-            # 证书路径指定，设置了 HTTPS 服务器时，此项必选
-            -t, STRING, https cert file, crt=site.crt,key=site.key.
-            # 设置 UPSTREAM 后端服务器参数，name 表示 upstream 的命名
-            # 注意 name={/1.1.1.1:90} 前面有 "/" 且后面不能有字符 "/"，命名不能有特殊字符
-            -i, STRING, real node name={/ip:port/ip:port},name={...}.
-            # 设置 document 路径，默认 html
-            -l, STRING, document root, default 'html'.
-            # 设置 UPSTREAM 模式，http=upsteam_name 中 "upsteam_name" 必须是 -i 参数中的一个命名
-            -p, STRING, enable upstring mode, http=upsteam_name,https=upstream_name.
-            # 设置配置 Nginx 的其他参数，或者说可以修改安装路径
-            -D, STRING, extra args, using nginx configure.
-            # 编译 Nginx 时，采用多进程执行 Job
-            -j, Enable multiple process make.
+            - Nginx 运行用户，默认：nobody
+              -u, STRING, nginx daemon user.
+
+            - Nginx 运行时使用的 CPU 个数，默认自动获取个数最大化设置
+              -c, NUMBER, cpu cores.
+
+            - 实行正常安装（静态服务器而非反向代理服务器）
+              -n, normal install, default.
+
+            - HTTP 参数设置，静态服务器与反向代理服务器需设置，默认 HTTP
+              -h, STRING, http hostname:port(set http).
+
+            - HTTPS 参数设置，态服务器与反向代理服务器需设置，默认 HTTP
+              -s, STRING, https hostname:port(set https).
+
+            - 证书路径指定，设置了 HTTPS 服务器时，此项必选
+              -t, STRING, https cert file, crt=site.crt,key=site.key.
+
+            - 设置 UPSTREAM 后端服务器参数，name 表示 upstream 的命名
+            - 注意 name={/1.1.1.1:90} 前面有 "/" 且后面不能有字符 "/"，命名不能有特殊字符
+              -i, STRING, real node name={/ip:port/ip:port},name={...}.
+
+            - 设置 document 路径，默认 html
+              -l, STRING, document root, default 'html'.
+
+            - 设置 UPSTREAM 模式，http=upsteam_name 中 "upsteam_name" 必须是 -i 参数中的一个命名
+              -p, STRING, enable upstring mode, http=upsteam_name,https=upstream_name.
+
+            - 设置配置 Nginx 的其他参数，或者说可以修改安装路径
+              -D, STRING, extra args, using nginx configure.
+
+            - 编译 Nginx 时，采用多进程执行 Job
+              -j, Enable multiple process make.
 
 ### 实例
   - 基本安装
