@@ -2,6 +2,11 @@
 
 ### Nginx 自动安装脚本
 
+### 依赖包
+  - 执行安装
+    - yum install zlib zlib-devel gcc gcc-c++ make -y
+    - yum install openssl openssl-devel -y
+
 ### 默认路径
   - Nginx 默认安装路径
     1. /opt/nginx
